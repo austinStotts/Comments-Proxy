@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Button from './comps/button';
 import Axios from 'axios';
 import styles from './styles';
+import Radium from 'radium';
 
 class App extends PureComponent {
   constructor (props) {
@@ -40,9 +41,12 @@ class App extends PureComponent {
   render () {
     console.log("RENDER !!")
     return (
-      <div>
+      <div> 
         <h1>{this.state.number}</h1>
-        <Button text={'i am a button'} function={()=>{console.log('click')}}/>
+        <span>
+        <Button text={'buy'} function={()=>{console.log('click')}}/>
+        <Button text={'more'} function={_=>console.log('more!')}/>
+        </span>
       </div>
     )
   }

@@ -1,18 +1,29 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import styles from '../styles';
 
-const Button = (props) => {
-  console.log(props.text);
-  return (
-    <div>
-      <button 
-      className="ui-button"
-      style={styles.uiButton}
-      onClick={props.function}
-      >{props.text}</button>
-    </div>
-  )
+class Button extends PureComponent {
+  constructor (props) {
+    super(props);
+  }
+  render () {
+    return (
+      <div style={[
+        styles.uiButtonDiv.base,
+        styles.uiButtonDiv.primary
+      ]}>
+        <button 
+        className="ui-button"
+        style={[
+          styles.uiButton.base,
+          styles.uiButton.primary
+        ]}
+        onClick={this.props.function}
+        >{this.props.text}</button>
+      </div>
+    )
+  }
 }
 
 Button.propTypes = {
@@ -22,4 +33,5 @@ Button.propTypes = {
   function: PropTypes.func.isRequired
 }
 
+Button = Radium(Button);
 export default Button;
