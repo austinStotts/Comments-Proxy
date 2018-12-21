@@ -1,12 +1,11 @@
 import Axios from 'axios';
 
-beforeEach(() => {
+// currently not needed
+// beforeEach(() => {
+// });
 
-});
-
-afterEach(() => {
-
-});
+// afterEach(() => {
+// });
 
 test('can interact with pet purchase service', (done) => {
   Axios.get('http://localhost:4000/buy', {
