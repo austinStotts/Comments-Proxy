@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import styles from '../styles';
 
+// a generic / standard Button used to standardize buttons
+// takes a text |string| #
+// takes a func |function| #
+// takes a width |string|
+// takes a height |string|
 class Button extends PureComponent {
   constructor (props) {
     super(props);
     this.height;
-    this.width;
+    this.width; // if props.width or props.height was passed in override set value
     props.width ? this.width = props.width : this.size = '75px';
     props.height ? this.height = props.height : this.size = '30px';
   }
@@ -20,7 +25,6 @@ class Button extends PureComponent {
       ]}>
         <button 
         className="ui-button"
-        style={{fontSize:this.size}}
         style={[
           styles.uiButton.base,
           styles.uiButton.primary,
@@ -40,8 +44,12 @@ Button.propTypes = {
   //the text of the button
   text: PropTypes.string.isRequired,
   // what the button does when clicked
-  func: PropTypes.func.isRequired
+  func: PropTypes.func.isRequired,
+  // width / height
+  width: PropTypes.string,
+  height: PropTypes.string
 }
 
+// radium allows a style array
 Button = Radium(Button);
 export default Button;

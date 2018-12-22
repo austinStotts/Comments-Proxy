@@ -1,5 +1,6 @@
 
 // Javascript styling object
+// used as a sort of global style object
 const styles = {
   uiButton: {
     base: {
@@ -25,9 +26,6 @@ const styles = {
     base: {
       margin:'5px',
     },
-    Primary: {
-
-    },
   },
   uiLink: {
     base: {
@@ -40,18 +38,13 @@ const styles = {
         color:'red',
       },
     },
-    primar: {
-      
-    },
   },
   uiLinkDiv: {
     base: {
-
+      padding:'0%',
+      margin:'0%',
     },
-    primar: {
-      
-    },
-  }
+  },
 }
 
 export default styles;

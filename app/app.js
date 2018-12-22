@@ -14,6 +14,7 @@ class App extends PureComponent {
       pet: '',
       number: ''
     }
+    this.ids = ['1113','1126','12210','12213','12217','13122'];
     this.getPet = this.getPet.bind(this);
   }
 
@@ -30,16 +31,20 @@ class App extends PureComponent {
     })
   }
 
+  componentDidMount () {
+    this.getPet();
+  }
+
   render () {
-    console.log("RENDER !!")
     return (
-      <div> 
+      <div>
         <h1>{this.state.number}</h1>
         <span>
-          <Button width={'100px'} height={'40px'} text={'buy'} func={_=>{console.log('click')}}/>
+          <Button width={'100px'} height={'40px'} text={'buy'} func={_=>{this.getPet(this.ids[Math.floor(Math.random*this.ids.length)])}}/>
           <Button text={'more'} func={_=>console.log('more!')}/>
           <Link text={'here'} size={'40px'} func={_=>console.log('zelda')}/>
           <Link text={'where'} func={_=> console.log('WWW')}/>
+          <h1>{this.state.pet.species}</h1>
         </span>
       </div>
     )
