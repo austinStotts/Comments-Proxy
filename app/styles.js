@@ -33,7 +33,8 @@ const styles = {
       fontFamily:'Roboto, sans-serif',
       transitionDuration:'0.4s',
       cursor:'pointer',
-      decoration:'underline',
+      textDecoration:'none',
+      color:'black',
       ":hover": {
         color:'red',
       },

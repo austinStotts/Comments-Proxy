@@ -23,12 +23,13 @@ class Link extends PureComponent {
       <em>
         <a
         className='ui-link'
+        href={this.props.link ? this.props.link : null}
+        target={'_blank'}
         style={[
           styles.uiLink.base,
           styles.uiLink.primary,
           {fontSize:this.size}
         ]}
-        onClick={this.props.func}
         >{this.props.text}
         </a>
         </em>
@@ -41,7 +42,9 @@ Link.propTypes = {
   // what the anchor says
   text: PropsTypes.string.isRequired,
   // what the anchor does
-  func: PropsTypes.func.isRequired,
+  func: PropsTypes.func,
+  // where it goes
+  link: PropsTypes.string,
   // what size the link is
   size: PropsTypes.string
 }
