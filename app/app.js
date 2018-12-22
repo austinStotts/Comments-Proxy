@@ -1,6 +1,7 @@
 import React, { Component, PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import Button from './comps/button';
+import Link from './comps/link';
 import Axios from 'axios';
 import styles from './styles';
 import Radium from 'radium';
@@ -29,23 +30,16 @@ class App extends PureComponent {
     })
   }
 
-  componentDidMount () {
-    //this.getPet()
-    window.setInterval(() => {
-      this.setState(_=> {
-        return {number:1}
-      });
-    },500)
-  } 
-
   render () {
     console.log("RENDER !!")
     return (
       <div> 
         <h1>{this.state.number}</h1>
         <span>
-        <Button text={'buy'} function={()=>{console.log('click')}}/>
-        <Button text={'more'} function={_=>console.log('more!')}/>
+          <Button width={'100px'} height={'40px'} text={'buy'} func={_=>{console.log('click')}}/>
+          <Button text={'more'} func={_=>console.log('more!')}/>
+          <Link text={'here'} size={'40px'} func={_=>console.log('zelda')}/>
+          <Link text={'where'} func={_=> console.log('WWW')}/>
         </span>
       </div>
     )
