@@ -21,8 +21,10 @@ class App extends PureComponent {
         "price":"11,000"
       },
     };
+    // bind(this);
     this.getPet = this.getPet.bind(this);
     this.print = this.print.bind('this');
+    // *** *** *** *** *** *** *** *** ***
   }
 
 
@@ -50,7 +52,7 @@ class App extends PureComponent {
   render () {
     return (
       <div>
-        <Link text={'go'} size={'20px'} link={'https://en.wikipedia.org/wiki/Reptile'}/>
+        <Title pet={this.state.pet}/>
         <Button text={'buy'} func={_=>this.print('buy')}/>
       </div>
     )
