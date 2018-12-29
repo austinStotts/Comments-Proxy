@@ -2,6 +2,7 @@
 // Javascript styling object
 // used as a sort of global style object
 const styles = {
+  // UI Button Component Main
   uiButton: {
     base: {
       width:'75px',
@@ -24,6 +25,7 @@ const styles = {
       },
     },
   },
+  // UI Button Component Div
   uiButtonDiv: {
     base: {
       margin:'5px',
@@ -33,6 +35,7 @@ const styles = {
       display:'inline'
     }
   },
+  // UI Link Component Main
   uiLink: {
     base: {
       fontSize:'14px',
@@ -46,12 +49,14 @@ const styles = {
       },
     },
   },
+  // UI Link Component Div
   uiLinkDiv: {
     base: {
       padding:'0%',
       margin:'0%',
     },
   },
+  // price Main
   price: {
     base: {
       padding:'0%',
@@ -68,25 +73,32 @@ const styles = {
       },
     }
   },
+  // price Div 
   priceDiv: {
     base: {
       display:'inline-block'
     }
   },
+  // Title Main - wrapper for animal info
   titleDiv: {
     base: {
       margin:'10px',
     },
   },
+  // disclaimer Main
   disclaimer: {
     base: {
-      fontFamily:'Roboto, sans-serif',
-      wordWrap:'normal',
-    },
+
+    }
   },
+  // disclaimer Div
   disclaimerDiv: {
     base: {
+      margin:'10px',
       width:'20%',
+      fontFamily:'Thasadith, sans-serif',
+      fontSize:'6px',
+      fontWeigth:'200',
     }
   }
 }

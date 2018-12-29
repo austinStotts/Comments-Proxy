@@ -9,15 +9,14 @@ class Disclaimer extends PureComponent {
 
   render () {
     return (
-      <div style={[styles.disclaimerDiv.base]}>
-        <p
-        styles={[
-          styles.disclaimer.base
-        ]}
+      <div style={[styles.disclaimerDiv.base]} key={'disclaimer-div'}>
+        <h1
+          key={'disclaimer-main'}
+          styles={[styles.disclaimer.base]}
         >
           * animals are only sold if buyers meet strict 
           guidelines for animal rights and housing needs.
-        </p>
+        </h1>
       </div>
     )
   }
