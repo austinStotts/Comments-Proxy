@@ -69,7 +69,25 @@ const styles = {
     }
   },
   priceDiv: {
-    display:'inline-block'
+    base: {
+      display:'inline-block'
+    }
+  },
+  titleDiv: {
+    base: {
+      margin:'10px',
+    },
+  },
+  disclaimer: {
+    base: {
+      fontFamily:'Roboto, sans-serif',
+      wordWrap:'normal',
+    },
+  },
+  disclaimerDiv: {
+    base: {
+      width:'20%',
+    }
   }
 }
 

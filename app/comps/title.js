@@ -13,7 +13,7 @@ class Title extends PureComponent {
 
   render () {
     return (
-      <div>
+      <div style={[styles.titleDiv.base]}>
         <Link text={this.props.pet.class} size={'20px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.class}`}/>
         <Link text={this.props.pet.family} size={'20px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.family}`}/>
         <Link text={this.props.pet.genus} size={'20px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.genus}`}/>
@@ -23,4 +23,5 @@ class Title extends PureComponent {
   }
 }
 
+Title = Radium(Title);
 export default Title;

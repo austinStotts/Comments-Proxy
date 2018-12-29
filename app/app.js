@@ -7,6 +7,7 @@ import Title from './comps/title';
 import Axios from 'axios';
 import styles from './styles';
 import Radium from 'radium';
+import Disclaimer from './comps/disc';
 
 class App extends PureComponent {
   constructor (props) {
@@ -52,6 +53,7 @@ class App extends PureComponent {
       <div>
         <Title pet={this.state.pet}/>
         <Buy price={this.state.pet.price} func={this.print}/>
+        <Disclaimer />
       </div>
     )
   }

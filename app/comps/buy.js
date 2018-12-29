@@ -15,12 +15,13 @@ class Buy extends PureComponent {
 
   render () {
     return (
-      <span>
+      <div style={[styles.titleDiv.base]}>
         <Price price={this.props.price}/>
         <Button text={'buy'} func={_=>this.props.func('buy')}/>
-      </span>
+      </div>
     )
   }
 }
 
+Buy = Radium(Buy);
 export default Buy;
