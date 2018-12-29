@@ -8,7 +8,7 @@ import Axios from 'axios';
 import styles from './styles';
 import Radium from 'radium';
 import Disclaimer from './comps/disc';
-import Options from './comps/options';
+import Option from './comps/option';
 
 class App extends PureComponent {
   constructor (props) {
@@ -23,11 +23,13 @@ class App extends PureComponent {
         "species":"Ostrich",
         "price":"11,000",
       },
+      buy: true
     };
 
     // bind(this);
     this.getPet = this.getPet.bind(this);
     this.print = this.print.bind(this);
+    this.showBuy = this.showBuy.bind(this);
     // *** *** *** *** *** *** *** *** ***
 
   }
@@ -49,15 +51,28 @@ class App extends PureComponent {
     console.log(text);
   }
 
+  showBuy () {
+    this.setState({buy:!this.state.buy});
+  }
+
   render () {
-    return (
-      <div>
-        <Title pet={this.state.pet}/>
-        <Options show={this.showOptions}/>
-        <Buy price={this.state.pet.price} func={this.print}/>
-        <Disclaimer />
-      </div>
-    )
+    if(this.state.buy) {
+      return (
+        <div style={{width:'100%'}}>
+          <Title pet={this.state.pet}/>
+          <Buy price={this.state.pet.price} func={this.showBuy}/>
+          <Disclaimer />
+        </div>
+      )
+    } else {
+      return (
+        <div style={{width:'100%'}}>
+          <button onClick={this.showBuy}>back</button>
+          <Link text={this.state.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.state.pet.species}`}/>
+          <Option o1={'male'} o2={'female'}/>
+        </div>
+      )
+    }
   }
 }
 
