@@ -15,8 +15,8 @@ class Option extends PureComponent {
   render () {
     return (
       <div>
-        <Button text={this.props.o1}/>
-        <Button text={this.props.o2}/>
+      <button key={'one'} style={[styles.toggle.base, styles.toggle.primary]}>{this.props.o1}</button>
+      <button key={'two'} style={[styles.toggle.base, styles.toggle.primary]}>{this.props.o2}</button>
       </div>
     )
   }

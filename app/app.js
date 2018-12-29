@@ -67,7 +67,7 @@ class App extends PureComponent {
     } else {
       return (
         <div style={{width:'100%'}}>
-          <button onClick={this.showBuy}>back</button>
+          <button style={[styles.toggle.base, styles.toggle.primary]} onClick={this.showBuy}>back</button>
           <Link text={this.state.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.state.pet.species}`}/>
           <Option o1={'male'} o2={'female'}/>
         </div>

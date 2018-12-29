@@ -13,7 +13,7 @@ const styles = {
       borderColor:'#0074D9',
       fontSize:'17px',
       fontFamily:'Raleway, sans-serif',
-      transitionDuration:'0.6s',
+      transitionDuration:'0.3s',
       cursor:'pointer',
       display:'inline-block'
     }, 
@@ -40,7 +40,7 @@ const styles = {
     base: {
       fontSize:'14px',
       fontFamily:'Roboto, sans-serif',
-      transitionDuration:'0.4s',
+      transitionDuration:'0.3s',
       cursor:'pointer',
       textDecoration:'none',
       color:'black',
@@ -64,12 +64,9 @@ const styles = {
       fontSize:'20px',
       fontFamily:'Roboto, sans-serif',
       color:'black',
-      transitionDuration:'0.4s',
+      transitionDuration:'0.3s',
       outline:'none',
       display:'inline-block',
-      ":hover": {
-        color:'#FF851B',
-      },
     },
   },
   // price Div 
@@ -120,6 +117,30 @@ const styles = {
     base: {
       margin:'10px',
     }
+  },
+  // Button Options
+  toggle: {
+    base: {
+      width:'75px',
+      height:'30px',
+      outline:'none',
+      margin:'3px',
+      borderRadius:'5px',
+      borderWidth:'1px',
+      borderColor:'#0074D9',
+      fontSize:'17px',
+      fontFamily:'Raleway, sans-serif',
+      transitionDuration:'0.3s',
+      cursor:'pointer',
+      display:'inline-block'
+    },
+    primary: {
+      display:'inline-block',
+      ":hover": {
+        backgroundColor:'#0074D9',
+        color:'white'
+      },
+    },
   }
 }
 
