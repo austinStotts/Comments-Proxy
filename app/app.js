@@ -2,6 +2,7 @@ import React, { Component, PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import Button from './comps/button';
 import Link from './comps/link';
+import Buy from './comps/buy';
 import Title from './comps/title';
 import Axios from 'axios';
 import styles from './styles';
@@ -18,19 +19,16 @@ class App extends PureComponent {
         "family":"Struthionidae",
         "genus":"Struthio",
         "species":"Ostrich",
-        "price":"11,000"
+        "price":"11,000",
       },
     };
+
     // bind(this);
     this.getPet = this.getPet.bind(this);
     this.print = this.print.bind('this');
     // *** *** *** *** *** *** *** *** ***
+
   }
-
-
-
-
-
 
   getPet () { // server get request for pet object
     Axios.get('http://localhost:4000/buy', {
@@ -53,7 +51,7 @@ class App extends PureComponent {
     return (
       <div>
         <Title pet={this.state.pet}/>
-        <Button text={'buy'} func={_=>this.print('buy')}/>
+        <Buy price={this.state.pet.price} func={this.print}/>
       </div>
     )
   }

@@ -14,8 +14,10 @@ const styles = {
       fontFamily:'Raleway, sans-serif',
       transitionDuration:'0.6s',
       cursor:'pointer',
+      display:'inline-block'
     }, 
     primary: {
+      display:'inline-block',
       ":hover": {
         backgroundColor:'#0074D9',
         color:'white'
@@ -25,7 +27,11 @@ const styles = {
   uiButtonDiv: {
     base: {
       margin:'5px',
+      display:'inline-block'
     },
+    primary: {
+      display:'inline'
+    }
   },
   uiLink: {
     base: {
@@ -46,6 +52,25 @@ const styles = {
       margin:'0%',
     },
   },
+  price: {
+    base: {
+      padding:'0%',
+      margin:'0%',
+      fontSize:'20px',
+      fontFamily:'Roboto, sans-serif',
+      color:'black',
+      transitionDuration:'0.4s',
+      cursor:'pointer',
+      outline:'none',
+      display:'inline-block',
+      ":hover": {
+        color:'orange',
+      },
+    }
+  },
+  priceDiv: {
+    display:'inline-block'
+  }
 }
 
 export default styles;
