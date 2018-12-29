@@ -17,7 +17,7 @@ class Title extends PureComponent {
         <Link text={this.props.pet.class} size={'20px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.class}`}/>
         <Link text={this.props.pet.family} size={'20px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.family}`}/>
         <Link text={this.props.pet.genus} size={'20px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.genus}`}/>
-        <Link text={this.props.pet.species} size={'20px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.species}`}/>
+        <Link text={this.props.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.species}`}/>
       </div>
     )
   }

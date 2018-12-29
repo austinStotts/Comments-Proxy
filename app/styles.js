@@ -45,7 +45,7 @@ const styles = {
       textDecoration:'none',
       color:'black',
       ":hover": {
-        color:'red',
+        color:'#FF4136',
       },
     },
   },
@@ -65,19 +65,19 @@ const styles = {
       fontFamily:'Roboto, sans-serif',
       color:'black',
       transitionDuration:'0.4s',
-      cursor:'pointer',
       outline:'none',
       display:'inline-block',
       ":hover": {
-        color:'orange',
+        color:'#FF851B',
       },
-    }
+    },
   },
   // price Div 
   priceDiv: {
     base: {
-      display:'inline-block'
-    }
+      display:'inline-block',
+      marginRight:'5px',
+    },
   },
   // Title Main - wrapper for animal info
   titleDiv: {
@@ -89,7 +89,7 @@ const styles = {
   disclaimer: {
     base: {
 
-    }
+    },
   },
   // disclaimer Div
   disclaimerDiv: {
@@ -99,6 +99,26 @@ const styles = {
       fontFamily:'Thasadith, sans-serif',
       fontSize:'6px',
       fontWeigth:'200',
+    },
+  },
+  // Options Main
+  options: {
+    base: {
+      border:'none',
+      outline:'none',
+      fontSize:'16px',
+      fontStyle:'italic',
+      padding:'2px',
+      display:'inline-block',
+      ":hover": {
+        color:'#0074D9',
+      },
+    },
+  },
+  // Options Div
+  optionsDiv: {
+    base: {
+      margin:'10px',
     }
   }
 }
