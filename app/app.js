@@ -23,13 +23,11 @@ class App extends PureComponent {
         "species":"Ostrich",
         "price":"11,000",
       },
-      options: true
     };
 
     // bind(this);
     this.getPet = this.getPet.bind(this);
     this.print = this.print.bind(this);
-    this.showOptions = this.showOptions.bind(this);
     // *** *** *** *** *** *** *** *** ***
 
   }
@@ -51,15 +49,11 @@ class App extends PureComponent {
     console.log(text);
   }
 
-  showOptions () {
-    this.setState({options:!this.state.options})
-  }
-
   render () {
     return (
       <div>
         <Title pet={this.state.pet}/>
-        <Options />
+        <Options show={this.showOptions}/>
         <Buy price={this.state.pet.price} func={this.print}/>
         <Disclaimer />
       </div>

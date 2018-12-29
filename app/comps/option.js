@@ -10,7 +10,9 @@ class Option extends PureComponent {
   render () {
     return (
       <div>
-        
+        <h3>sex:</h3>
+        <h4>Male</h4>
+        <h4>Female</h4>
       </div>
     )
   }
