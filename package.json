@@ -8,7 +8,7 @@
     "go-server": "go run server.go",
     "node-server": "node server.js",
     "test": "jest --detectOpenHandles",
-    "start": "npm i; webpack; go run server"
+    "start": "npm i; webpack; node server.js"
   },
   "repository": {
     "type": "git",
