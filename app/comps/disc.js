@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import styles from '../styles';
 import Radium from 'radium';
 
+// Disclaimer for purchasing animals
 class Disclaimer extends PureComponent {
   constructor (props) {
     super(props);
@@ -22,5 +23,6 @@ class Disclaimer extends PureComponent {
   }
 }
 
+// Radium function for styling
 Disclaimer = Radium(Disclaimer);
 export default Disclaimer;

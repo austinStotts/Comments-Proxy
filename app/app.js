@@ -1,15 +1,19 @@
+// NPM Modules
 import React, { Component, PureComponent } from 'react';
 import ReactDOM from 'react-dom';
+import Axios from 'axios';
+import Radium from 'radium';
+
+// React components from files
+import styles from './styles';
+import Disclaimer from './comps/disc';
+import Option from './comps/option';
 import Button from './comps/button';
 import Link from './comps/link';
 import Buy from './comps/buy';
 import Title from './comps/title';
-import Axios from 'axios';
-import styles from './styles';
-import Radium from 'radium';
-import Disclaimer from './comps/disc';
-import Option from './comps/option';
 
+// Root component
 class App extends PureComponent {
   constructor (props) {
     super(props);
@@ -28,10 +32,8 @@ class App extends PureComponent {
 
     // bind(this);
     this.getPet = this.getPet.bind(this);
-    this.print = this.print.bind(this);
     this.showBuy = this.showBuy.bind(this);
     // *** *** *** *** *** *** *** *** ***
-
   }
 
   getPet () { // server get request for pet object
@@ -47,11 +49,7 @@ class App extends PureComponent {
     })
   }
 
-  print (text) { // print function
-    console.log(text);
-  }
-
-  showBuy () {
+  showBuy () { // toggle purchase options
     this.setState({buy:!this.state.buy});
   }
 
@@ -76,4 +74,5 @@ class App extends PureComponent {
   }
 }
 
+// ReactDOM Render function
 ReactDOM.render(<App />, document.getElementById('root'));
