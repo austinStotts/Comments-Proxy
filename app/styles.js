@@ -152,7 +152,6 @@ const styles = {
       color:'black',
       fontSize:'24px',
       ":hover": {
-        fontSize:'26px',
         color:'#FF4136',
       },
     }

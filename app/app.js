@@ -20,12 +20,12 @@ class App extends PureComponent {
     this.state = {
       pet_id: "10163",
       pet: {
-        "pet_id":"1111",
-        "class":"mammal",
-        "family":"Felidae",
-        "genus":"Panthera",
-        "species":"Tiger",
-        "price":"48,000"
+        "pet_id":"9999",
+        "class":"Loading...",
+        "family":"...",
+        "genus":"...",
+        "species":"...",
+        "price":"..."
       },
       buy: true
     };
@@ -59,27 +59,25 @@ class App extends PureComponent {
 
   render () {
     // Show product info
-    if(this.state.buy) {
-      return (
-        <div style={{width:'100%'}}>
+    return (
+      <div>
+        <div hidden={!this.state.buy} style={{width:'100%'}}>
           <Title pet={this.state.pet}/>
           <Buy price={this.state.pet.price} func={this.showBuy}/>
           <Disclaimer />
         </div>
-      )
-    } 
-    // Show Purchase Options
-    else {
-      return (
-        <div style={{width:'100%'}}>
+      
+
+        {/* show purchase options: */}
+        <div hidden={this.state.buy} style={{width:'100%'}}> 
           <i className={'material-icons'} style={[styles.back.base]} onClick={this.showBuy}>undo</i>
           <Link text={this.state.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.state.pet.species}`}/>
           <Option o1={'male'} o2={'female'}/>
           <Option o1={'gift wrap'} o2={'none'} default={'two'}/>
           <Option o1={'toy box'} o2={'none'} default={'two'}/>
         </div>
-      )
-    }
+      </div>
+    )
   }
 }
 
