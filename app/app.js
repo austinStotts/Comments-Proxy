@@ -58,7 +58,6 @@ class App extends PureComponent {
 
   render () {
     // Show product info
-    if 
     if(this.state.buy) {
       return (
         <div style={{width:'100%'}}>
