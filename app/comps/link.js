@@ -4,9 +4,17 @@ import PropTypes from 'prop-types';
 import styles from '../styles';
 
 // a generic / standard Button used to standardize buttons
+
 // takes a text |string| #
 // takes a func |function| #
 // takes a size |string|
+// takes a special |object|
+// takes a specialDiv |object|
+
+// special props are objects containing inline css 
+// used to do special styling on generic comps
+
+// a generic / standard Link used to standardize Links
 class Link extends PureComponent {
   constructor (props) {
     super(props);

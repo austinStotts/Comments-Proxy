@@ -4,10 +4,16 @@ import Radium from 'radium';
 import styles from '../styles';
 
 // a generic / standard Button used to standardize buttons
+
 // takes a text |string| #
 // takes a func |function| #
-// takes a width |string|
-// takes a height |string|
+// takes a width |string| <-< should depricate
+// takes a height |string| <-< should depricate
+// takes a special |object|
+// takes a specialDiv |object|
+
+// special props are objects containing inline css 
+// used to do special styling on generic comps
 class Button extends PureComponent {
   constructor (props) {
     super(props);
