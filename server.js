@@ -3,5 +3,6 @@ const app = express();
 app.use(express.static('dist'));
 
 app.listen(process.env.PORT || '3002', () => {
-  console.log("Roger Roger");
+  console.log("Roger Roger // PORT: 3002");
+  console.log("\nserving static html")
 })

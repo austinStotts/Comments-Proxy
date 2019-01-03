@@ -150,11 +150,42 @@ const styles = {
       margin:'3px',
       transitionDuration:'0.2s',
       color:'black',
-      fontSize:'24px',
+      fontSize:'28px',
       ":hover": {
         color:'#FF4136',
       },
     }
+  },
+  // div wrapper
+  div: {
+    base: {
+      margin:'10px',
+      padding:'0%'
+    }
+  },
+  // finish button
+  finish: {
+    base: {
+      width:'208px',
+      height:'35px',
+      outline:'none',
+      marginTop:'10px',
+      borderRadius:'5px',
+      borderWidth:'1px',
+      borderColor:'#FFA500',
+      fontSize:'19px',
+      fontFamily:'Raleway, sans-serif',
+      transitionDuration:'0.3s',
+      cursor:'pointer',
+      display:'inline-block',
+    }, 
+    primary: {
+      display:'inline-block',
+      ":hover": {
+        backgroundColor:'#FFA500',
+        color:'white'
+      },
+    },
   }
 }
 

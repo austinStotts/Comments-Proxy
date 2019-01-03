@@ -8,6 +8,7 @@ import Radium from 'radium';
 import styles from './styles';
 import Disclaimer from './comps/disc';
 import Option from './comps/option';
+import Options from './comps/options';
 import Button from './comps/button';
 import Link from './comps/link';
 import Buy from './comps/buy';
@@ -42,7 +43,7 @@ class App extends PureComponent {
         "pet_id":this.state.pet_id
       }
     }).then(res => {
-      console.log(res.data);
+      console.table(res.data);
       this.setState({
         pet:res.data
       })
@@ -53,7 +54,7 @@ class App extends PureComponent {
     this.setState({buy:!this.state.buy});
   }
 
-  componentDidMount () {
+  componentDidMount () { // get current pet data on mount
     this.getPet();
   }
 
@@ -61,7 +62,7 @@ class App extends PureComponent {
     // Show product info
     return (
       <div>
-        <div hidden={!this.state.buy} style={{width:'100%'}}>
+        <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
           <Title pet={this.state.pet}/>
           <Buy price={this.state.pet.price} func={this.showBuy}/>
           <Disclaimer />
@@ -69,12 +70,8 @@ class App extends PureComponent {
       
 
         {/* show purchase options: */}
-        <div hidden={this.state.buy} style={{width:'100%'}}> 
-          <i className={'material-icons'} style={[styles.back.base]} onClick={this.showBuy}>undo</i>
-          <Link text={this.state.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.state.pet.species}`}/>
-          <Option o1={'male'} o2={'female'}/>
-          <Option o1={'gift wrap'} o2={'none'} default={'two'}/>
-          <Option o1={'toy box'} o2={'none'} default={'two'}/>
+        <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
+          <Options pet={this.state.pet} showBuy={this.showBuy}/>
         </div>
       </div>
     )

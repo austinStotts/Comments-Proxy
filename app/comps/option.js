@@ -67,7 +67,7 @@ class Option extends PureComponent {
             backgroundColor:this.state.o1Background,
             color:this.state.o1Color,
             width:'100px',
-            margin:'6px 4px 6px 4px',
+            margin:'6px 4px 6px 0px',
           }
         ]}>
         {this.props.o1}
@@ -84,7 +84,7 @@ class Option extends PureComponent {
             backgroundColor:this.state.o2Background,
             color:this.state.o2Color,
             width:'100px',
-            margin:'6px 4px 6px 4px',
+            margin:'6px 0px 6px 4px',
           }
         ]}>
         {this.props.o2}

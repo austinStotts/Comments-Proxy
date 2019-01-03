@@ -20,18 +20,18 @@ class Link extends PureComponent {
         styles.uiLinkDiv.base,
         styles.uiLinkDiv.primary
       ]}>
-      <em>
-        <a
-        className='ui-link'
-        href={this.props.link ? this.props.link : null}
-        target={'_blank'}
-        style={[
-          styles.uiLink.base,
-          styles.uiLink.primary,
-          {fontSize:this.size}
-        ]}
-        >{this.props.text}
-        </a>
+        <em>
+          <a
+          className='ui-link'
+          href={this.props.link ? this.props.link : null}
+          target={'_blank'}
+          style={[
+            styles.uiLink.base,
+            styles.uiLink.primary,
+            {fontSize:this.size}
+          ]}
+          >{this.props.text}
+          </a>
         </em>
       </div>
     )
