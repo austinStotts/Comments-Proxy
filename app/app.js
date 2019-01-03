@@ -37,7 +37,7 @@ class App extends PureComponent {
   }
 
   getPet () { // server get request for pet object
-    Axios.get('ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy', {
+    Axios.get('http://ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy', {
       headers: {
         "pet_id":this.state.pet_id
       }
