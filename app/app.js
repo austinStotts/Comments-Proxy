@@ -19,14 +19,6 @@ class App extends PureComponent {
     super(props);
     this.state = {
       pet_id: "10163",
-      pet:   {
-        "pet_id":"10163",
-        "class":"mammal",
-        "family":"Odobenidae",
-        "genus":"Odobenus",
-        "species":"Walrus",
-        "price":"234,979",
-      },
       buy: true
     };
 
@@ -37,7 +29,7 @@ class App extends PureComponent {
   }
 
   getPet () { // server get request for pet object
-    Axios.get('http://localhost:4000/buy', { // !¡! Change to aws domain when aplicable !¡!
+    Axios.get('ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy', {
       headers: {
         "pet_id":this.state.pet_id
       }
@@ -50,6 +42,10 @@ class App extends PureComponent {
 
   showBuy () { // toggle purchase options
     this.setState({buy:!this.state.buy});
+  }
+
+  componentDidMount () {
+    this.getPet();
   }
 
   render () {
