@@ -42,6 +42,7 @@ class App extends PureComponent {
         "pet_id":this.state.pet_id
       }
     }).then(res => {
+      console.log(res.data);
       this.setState({
         pet:res.data
       })
