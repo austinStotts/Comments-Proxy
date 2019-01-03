@@ -37,12 +37,11 @@ class App extends PureComponent {
   }
 
   getPet () { // server get request for pet object
-    Axios.get('http://localhost:4000/buy', {
+    Axios.get('http://localhost:4000/buy', { // !¡! Change to aws domain when aplicable !¡!
       headers: {
         "pet_id":this.state.pet_id
       }
-    })
-    .then(res => {
+    }).then(res => {
       this.setState({
         pet:res.data
       })
@@ -54,6 +53,7 @@ class App extends PureComponent {
   }
 
   render () {
+    // Show product info
     if(this.state.buy) {
       return (
         <div style={{width:'100%'}}>
@@ -62,12 +62,16 @@ class App extends PureComponent {
           <Disclaimer />
         </div>
       )
-    } else {
+    } 
+    // Show Purchase Options
+    else {
       return (
         <div style={{width:'100%'}}>
           <button style={[styles.toggle.base, styles.toggle.primary]} onClick={this.showBuy}>back</button>
           <Link text={this.state.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.state.pet.species}`}/>
           <Option o1={'male'} o2={'female'}/>
+          <Option o1={'gift wrap'} o2={'none'} default={'two'}/>
+          <Option o1={'toy box'} o2={'none'} default={'two'}/>
         </div>
       )
     }

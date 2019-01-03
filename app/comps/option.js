@@ -18,7 +18,16 @@ class Option extends PureComponent {
       o2Background:'white',
       o2Color:'black',
     }
-    this.changeColor = this.changeColor.bind(this)
+    this.changeColor = this.changeColor.bind(this);
+  }
+
+  componentDidMount () { // sets default 'start' options
+    if(this.props.default === 'one') {
+      this.setState({o1State:true,o1Background:'#0074D9',o1Color:'white'})
+    } 
+    else if (this.props.default === 'two') {
+      this.setState({o2State:true,o2Background:'#0074D9',o2Color:'white'})
+    } 
   }
 
   changeColor (target) {
@@ -52,7 +61,8 @@ class Option extends PureComponent {
           styles.toggle.primary,
           {
             backgroundColor:this.state.o1Background,
-            color:this.state.o1Color
+            color:this.state.o1Color,
+            width:'100px'
           }
         ]}>
         {this.props.o1}
@@ -67,7 +77,8 @@ class Option extends PureComponent {
           styles.toggle.primary,
           {
             backgroundColor:this.state.o2Background,
-            color:this.state.o2Color
+            color:this.state.o2Color,
+            width:'100px'
           }
         ]}>
         {this.props.o2}
@@ -80,7 +91,9 @@ class Option extends PureComponent {
 Option.propTypes = {
   // name of 
   o1: PropTypes.string.isRequired,
-  o2: PropTypes.string.isRequired
+  o2: PropTypes.string.isRequired,
+  // which option is default
+  default: PropTypes.string
 }
 
 Option = Radium(Option);
