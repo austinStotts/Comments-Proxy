@@ -19,6 +19,14 @@ class App extends PureComponent {
     super(props);
     this.state = {
       pet_id: "10163",
+      pet: {
+        "pet_id":"1111",
+        "class":"mammal",
+        "family":"Felidae",
+        "genus":"Panthera",
+        "species":"Tiger",
+        "price":"48,000"
+      },
       buy: true
     };
 
@@ -50,6 +58,7 @@ class App extends PureComponent {
 
   render () {
     // Show product info
+    if 
     if(this.state.buy) {
       return (
         <div style={{width:'100%'}}>
