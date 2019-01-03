@@ -17,7 +17,7 @@ class Options extends PureComponent {
     return (
       <div>
           <i key={'backIcon'} className={'material-icons'} style={[styles.back.base]} onClick={this.props.showBuy}>undo</i>
-          <Link text={this.props.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.species}`}/>
+          <Link specialDiv={{display:'inline-block'}} special={{marginLeft:'10px',display:'inline-block'}} text={this.props.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.props.pet.species}`}/>
           <Option o1={'male'} o2={'female'}/>
           <Option o1={'gift wrap'} o2={'none'} default={'two'}/>
           <Option o1={'toy box'} o2={'none'} default={'two'}/>

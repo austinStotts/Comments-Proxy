@@ -151,6 +151,7 @@ const styles = {
       transitionDuration:'0.2s',
       color:'black',
       fontSize:'28px',
+      display:'inline-block',
       ":hover": {
         color:'#FF4136',
       },

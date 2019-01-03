@@ -21,7 +21,8 @@ class Button extends PureComponent {
     return (
       <div style={[
         styles.uiButtonDiv.base,
-        styles.uiButtonDiv.primary
+        styles.uiButtonDiv.primary,
+        this.props.specialDiv
       ]}>
         <button 
         className="ui-button"
@@ -31,7 +32,8 @@ class Button extends PureComponent {
           {
             width:this.width,
             height:this.height
-          }
+          },
+          this.props.special
         ]}
         onClick={this.props.func}
         >{this.props.text}</button>
@@ -47,7 +49,11 @@ Button.propTypes = {
   func: PropTypes.func.isRequired,
   // width / height
   width: PropTypes.string,
-  height: PropTypes.string
+  height: PropTypes.string,
+  // special css
+  special: PropTypes.object,
+  // special div css
+  specialDiv: PropTypes.object
 }
 
 // radium allows a style array

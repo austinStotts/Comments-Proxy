@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import Radium from 'radium';
-import PropsTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from '../styles';
 
 // a generic / standard Button used to standardize buttons
@@ -18,7 +18,8 @@ class Link extends PureComponent {
     return (
       <div style={[
         styles.uiLinkDiv.base,
-        styles.uiLinkDiv.primary
+        styles.uiLinkDiv.primary,
+        this.props.specialDiv
       ]}>
         <em>
           <a
@@ -28,7 +29,8 @@ class Link extends PureComponent {
           style={[
             styles.uiLink.base,
             styles.uiLink.primary,
-            {fontSize:this.size}
+            {fontSize:this.size},
+            this.props.special
           ]}
           >{this.props.text}
           </a>
@@ -40,13 +42,17 @@ class Link extends PureComponent {
 
 Link.propTypes = {
   // what the anchor says
-  text: PropsTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   // what the anchor does
-  func: PropsTypes.func,
+  func: PropTypes.func,
   // where it goes
-  link: PropsTypes.string,
+  link: PropTypes.string,
   // what size the link is
-  size: PropsTypes.string
+  size: PropTypes.string,
+  // special css 
+  special: PropTypes.object,
+  // special div css
+  specialDiv: PropTypes.object
 }
 
 // radium allows for a style array

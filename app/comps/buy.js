@@ -21,7 +21,7 @@ class Buy extends PureComponent {
     return (
       <div style={[styles.titleDiv.base]}>
         <Price price={this.props.price}/>
-        <Button text={'purchase'} func={this.props.func}/>
+        <Button special={{width:'300px'}} text={'purchase'} func={this.props.func}/>
       </div>
     )
   }
