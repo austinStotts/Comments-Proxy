@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import styles from '../styles';
 import Button from './button';
 
+// displays a pair of options
 class Option extends PureComponent {
   constructor (props) {
     super(props);
@@ -31,6 +32,7 @@ class Option extends PureComponent {
   }
 
   changeColor (target) {
+    // Target One
     if(target === 'one') {
       if(!this.state.o1State) {
         this.setState({o1Background:'#0074D9',o1Color:'white',o1State:!this.state.o1State}) 
@@ -38,7 +40,9 @@ class Option extends PureComponent {
       if(this.state.o2State === true) {
         this.setState({o2Background:'white',o2Color:'black',o2State:!this.state.o2State})
       }
-    } else if (target === 'two') {
+    } 
+    // Target Two
+    else if (target === 'two') {
       if(!this.state.o2State) {
         this.setState({o2Background:'#0074D9',o2Color:'white',o2State:!this.state.o2State}) 
       } else {this.setState({o2Background:'white',o2Color:'black',o2State:!this.state.o2State})}
@@ -62,7 +66,8 @@ class Option extends PureComponent {
           {
             backgroundColor:this.state.o1Background,
             color:this.state.o1Color,
-            width:'100px'
+            width:'100px',
+            margin:'6px 4px 6px 4px',
           }
         ]}>
         {this.props.o1}
@@ -78,7 +83,8 @@ class Option extends PureComponent {
           {
             backgroundColor:this.state.o2Background,
             color:this.state.o2Color,
-            width:'100px'
+            width:'100px',
+            margin:'6px 4px 6px 4px',
           }
         ]}>
         {this.props.o2}

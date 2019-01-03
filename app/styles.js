@@ -15,7 +15,7 @@ const styles = {
       fontFamily:'Raleway, sans-serif',
       transitionDuration:'0.3s',
       cursor:'pointer',
-      display:'inline-block'
+      display:'inline-block',
     }, 
     primary: {
       display:'inline-block',
@@ -141,6 +141,21 @@ const styles = {
         color:'white'
       },
     },
+  },
+  // back button
+  back:{
+    base:{
+      cursor:'pointer',
+      height:'30px',
+      margin:'3px',
+      transitionDuration:'0.2s',
+      color:'black',
+      fontSize:'24px',
+      ":hover": {
+        fontSize:'26px',
+        color:'#FF4136',
+      },
+    }
   }
 }
 

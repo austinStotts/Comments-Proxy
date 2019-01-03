@@ -18,14 +18,14 @@ class App extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      pet_id: "2111",
-      pet: {
-        "pet_id":"2111",
-        "class":"Aves",
-        "family":"Struthionidae",
-        "genus":"Struthio",
-        "species":"Ostrich",
-        "price":"11,000",
+      pet_id: "10163",
+      pet:   {
+        "pet_id":"10163",
+        "class":"mammal",
+        "family":"Odobenidae",
+        "genus":"Odobenus",
+        "species":"Walrus",
+        "price":"234,979",
       },
       buy: true
     };
@@ -67,7 +67,7 @@ class App extends PureComponent {
     else {
       return (
         <div style={{width:'100%'}}>
-          <button style={[styles.toggle.base, styles.toggle.primary]} onClick={this.showBuy}>back</button>
+          <i className={'material-icons'} style={[styles.back.base]} onClick={this.showBuy}>undo</i>
           <Link text={this.state.pet.species} size={'26px'} link={`https://en.wikipedia.org/wiki/${this.state.pet.species}`}/>
           <Option o1={'male'} o2={'female'}/>
           <Option o1={'gift wrap'} o2={'none'} default={'two'}/>
@@ -77,6 +77,8 @@ class App extends PureComponent {
     }
   }
 }
+
+App = Radium(App);
 
 // ReactDOM Render function
 ReactDOM.render(<App />, document.getElementById('root'));
