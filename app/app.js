@@ -23,10 +23,10 @@ class App extends PureComponent {
       pet: {
         "pet_id":"9999",
         "class":"Loading...",
-        "family":"...",
-        "genus":"...",
-        "species":"...",
-        "price":"..."
+        "family":"Loading...",
+        "genus":"Loading...",
+        "species":"Loading...",
+        "price":".Loading.."
       },
       buy: true
     };
