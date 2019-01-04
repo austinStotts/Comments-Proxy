@@ -11,7 +11,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'https://github.com/austinStotts/Purchase-Proxy.git',
       path: '/home/ubuntu/Purchase-Proxy',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+      'post-deploy': 'npm run start && pm2 startOrRestart ecosystem.config.js'
     }
   }
 }
