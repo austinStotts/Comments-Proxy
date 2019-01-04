@@ -55,40 +55,34 @@ class Option extends PureComponent {
   render () {
     return (
       <div>
-      <button 
-        key={'one'} 
-        onClick={_=>{
+      <Button 
+      text={this.props.o1}
+        func={_=>{
           this.changeColor('one');
         }}
-        style={[
-          styles.toggle.base, 
-          styles.toggle.primary,
+        special={
           {
             backgroundColor:this.state.o1Background,
             color:this.state.o1Color,
             width:'100px',
-            margin:'6px 4px 6px 0px',
+            height:'32px',
+            margin:'6px 2px 6px 0px',
           }
-        ]}>
-        {this.props.o1}
-      </button>
-      <button 
-        key={'two'} 
-        onClick={_=>{
+        }/>
+      <Button 
+        text={this.props.o2}
+        func={_=>{
           this.changeColor('two')
         }}
-        style={[
-          styles.toggle.base, 
-          styles.toggle.primary,
+        special={
           {
             backgroundColor:this.state.o2Background,
             color:this.state.o2Color,
             width:'100px',
-            margin:'6px 0px 6px 4px',
+            height:'32px',
+            margin:'6px 0px 6px 2px',
           }
-        ]}>
-        {this.props.o2}
-      </button>
+        }/>
       </div>
     )
   }

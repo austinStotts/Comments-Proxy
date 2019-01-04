@@ -14,38 +14,24 @@ import styles from '../styles';
 
 // special props are objects containing inline css 
 // used to do special styling on generic comps
-class Button extends PureComponent {
-  constructor (props) {
-    super(props);
-    this.height;
-    this.width; // if props.width or props.height was passed in override set value
-    props.width ? this.width = props.width : this.size = '75px';
-    props.height ? this.height = props.height : this.size = '30px';
-  }
-  
-  render () {
-    return (
-      <div style={[
-        styles.uiButtonDiv.base,
-        styles.uiButtonDiv.primary,
-        this.props.specialDiv
-      ]}>
-        <button 
-        className="ui-button"
-        style={[
-          styles.uiButton.base,
-          styles.uiButton.primary,
-          {
-            width:this.width,
-            height:this.height
-          },
-          this.props.special
-        ]}
-        onClick={this.props.func}
-        >{this.props.text}</button>
-      </div>
-    )
-  }
+let Button = (props) => {
+  return (
+    <div style={[
+      styles.uiButtonDiv.base,
+      styles.uiButtonDiv.primary,
+      props.specialDiv
+    ]}>
+      <button 
+      className="ui-button"
+      style={[
+        styles.uiButton.base,
+        styles.uiButton.primary,
+        props.special
+      ]}
+      onClick={props.func}
+      >{props.text}</button>
+    </div>
+  )
 }
 
 Button.propTypes = {
@@ -53,9 +39,6 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   // what the button does when clicked
   func: PropTypes.func.isRequired,
-  // width / height
-  width: PropTypes.string,
-  height: PropTypes.string,
   // special css
   special: PropTypes.object,
   // special div css

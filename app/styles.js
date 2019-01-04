@@ -5,8 +5,6 @@ const styles = {
   // UI Button Component Main
   uiButton: {
     base: {
-      width:'75px',
-      height:'30px',
       outline:'none',
       borderRadius:'5px',
       borderWidth:'1px',
@@ -167,10 +165,10 @@ const styles = {
   // finish button
   finish: {
     base: {
-      width:'208px',
+      width:'214px',
       height:'35px',
       outline:'none',
-      marginTop:'10px',
+      margin:'10px 0px 0px 4px',
       borderRadius:'5px',
       borderWidth:'1px',
       borderColor:'#FFA500',
