@@ -42,6 +42,7 @@ const styles = {
       cursor:'pointer',
       textDecoration:'none',
       color:'black',
+      display:'inline-block',
       ":hover": {
         color:'#FF4136',
       },
@@ -110,12 +111,6 @@ const styles = {
       },
     },
   },
-  // Options Div
-  optionsDiv: {
-    base: {
-      margin:'10px',
-    }
-  },
   // Button Options
   toggle: {
     base: {
@@ -162,29 +157,19 @@ const styles = {
       padding:'0%'
     }
   },
-  // finish button
-  finish: {
+  info: {
     base: {
-      width:'214px',
-      height:'35px',
-      outline:'none',
-      margin:'10px 0px 0px 4px',
-      borderRadius:'5px',
-      borderWidth:'1px',
-      borderColor:'#FFA500',
-      fontSize:'19px',
       fontFamily:'Raleway, sans-serif',
-      transitionDuration:'0.3s',
-      cursor:'pointer',
-      display:'inline-block',
-    }, 
-    primary: {
-      display:'inline-block',
-      ":hover": {
-        backgroundColor:'#FFA500',
-        color:'white'
-      },
-    },
+      margin:'0px 0px 0px 10px',
+      fontSize:'12px',
+      transitionDuration:'0.5s',
+    }
+  },
+  infoDiv: {
+    base: {
+      margin:'0px',
+      padding:'0px'
+    }
   }
 }
 

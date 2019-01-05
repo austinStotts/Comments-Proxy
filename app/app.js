@@ -19,8 +19,8 @@ class App extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      pet_id: "10166",
-      pet: {
+      pet_id: "10166", // current pet to 'get' from server / DB
+      pet: { // hold current pet to render
         "pet_id":"9999",
         "class":"Loading...",
         "family":"Loading...",
@@ -28,13 +28,12 @@ class App extends PureComponent {
         "species":"Loading...",
         "price":".Loading.."
       },
-      buy: true
+      buy: true // toggle showing purchase options
     };
 
-    // bind(this);
+    // bind functions to 'this' context
     this.getPet = this.getPet.bind(this);
     this.showBuy = this.showBuy.bind(this);
-    // *** *** *** *** *** *** *** *** ***
   }
 
   getPet () { // server get request for pet object
@@ -55,6 +54,7 @@ class App extends PureComponent {
   }
 
   componentDidMount () { // get current pet data on mount
+    console.log('hi :)');
     this.getPet();
   }
 
@@ -66,10 +66,11 @@ class App extends PureComponent {
           <Title pet={this.state.pet}/>
           <Buy price={this.state.pet.price} func={this.showBuy}/>
           <Disclaimer />
-        </div>
-      
+        </div>                                                            {/* 
 
-        {/* show purchase options: */}
+
+        always being rendered to clear hover states and keep user options.
+        show purchase options:                                            */}
         <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
           <Options pet={this.state.pet} showBuy={this.showBuy}/>
         </div>
