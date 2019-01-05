@@ -19,7 +19,7 @@ class App extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      pet_id: "10166", // current pet to 'get' from server / DB
+      pet_id: "1114", // current pet to 'get' from server / DB
       pet: { // hold current pet to render
         "pet_id":"9999",
         "class":"Loading...",
@@ -37,10 +37,7 @@ class App extends PureComponent {
   }
 
   getPet () { // server get request for pet object
-    Axios.get('http://ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy', {
-      headers: {
-        "pet_id":this.state.pet_id
-      }
+    Axios.get(`http://ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy/${this.state.pet_id}`, {
     }).then(res => {
       console.table(res.data);
       this.setState({
