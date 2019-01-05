@@ -60,7 +60,7 @@ class App extends PureComponent {
     return (
       <StyleRoot>
         <div>
-          <img src='./petsylogo.png' alt='...' width="160px"></img>
+          {/* <img src='./petsylogo.png' alt='...' width="160px"></img> */}
           <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
             <Title pet={this.state.pet}/>
             <Buy price={this.state.pet.price} func={this.showBuy}/>
