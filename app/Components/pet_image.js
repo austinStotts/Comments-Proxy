@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 
-import styles from '../../styles';
+import styles from '../styles';
 
 let PetImage = (props) => {
   return (

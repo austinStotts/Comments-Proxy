@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Radium from 'radium';
 
-import PetImage from './Components/pet_image';
-import PetDescription from './Components/pet_description';
+import PetImage from './pet_image';
+import PetDescription from './pet_description';
 import styles from '../styles';
 
 

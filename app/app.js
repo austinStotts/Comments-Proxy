@@ -15,14 +15,14 @@ import Buy from './comps/buy';
 import Title from './comps/title';
 
 // Pet-info
-import Description from './src/index';
+import Description from './Components/pet_info';
 
 // Root component
 class App extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      pet_id: "16133", // current pet to 'get' from server / DB
+      pet_id: "18250", // current pet to 'get' from server / DB
       pet: { // hold current pet to render
         "pet_id":"9999",
         "class":"Loading...",
