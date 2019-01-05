@@ -59,9 +59,9 @@ class App extends PureComponent {
     // Show product info
     return (
       <StyleRoot>
-        <div style={{display:'inline-block'}}>
-          <img src='./petsylogo.png' alt='...' width="160px" style={{display:'inline-block'}}></img>
-          <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%',display:'inline-block'}]}>
+        <div>
+          <img src='./petsylogo.png' alt='...' width="160px"></img>
+          <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
             <Title pet={this.state.pet}/>
             <Buy price={this.state.pet.price} func={this.showBuy}/>
             <Disclaimer />

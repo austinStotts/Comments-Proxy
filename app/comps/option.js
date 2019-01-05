@@ -64,9 +64,9 @@ class Option extends PureComponent {
           {
             backgroundColor:this.state.o1Background,
             color:this.state.o1Color,
-            width:'100px',
-            height:'32px',
-            margin:'6px 2px 6px 0px',
+            width:'90px',
+            height:'25px',
+            margin:'5px 1px 5px 0px',
           }
         }/>
       <Button 
@@ -78,9 +78,9 @@ class Option extends PureComponent {
           {
             backgroundColor:this.state.o2Background,
             color:this.state.o2Color,
-            width:'100px',
-            height:'32px',
-            margin:'6px 0px 6px 2px',
+            width:'90px',
+            height:'25px',
+            margin:'5px 0px 5px 1px',
           }
         }/>
       </div>

@@ -23,7 +23,7 @@ class Options extends PureComponent {
         <Button 
           text={'finish'}
           special={{
-            width:'214px',
+            width:'192px',
             height:'35px',
             margin:'10px 0px 0px 0px',
             borderColor:'#FFA500',
