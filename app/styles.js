@@ -90,7 +90,7 @@ const styles = {
   disclaimerDiv: {
     base: {
       margin:'10px',
-      width:'20%',
+      width:'80%',
       fontFamily:'Thasadith, sans-serif',
       fontSize:'6px',
       fontWeigth:'200',
@@ -146,6 +146,56 @@ const styles = {
     base: {
       margin:'0px',
       padding:'0px'
+    }
+  },
+  petInfo: {
+    base: {
+      display:'inline-block'
+    }
+  },
+  purchase: {
+    base: {
+      marginTop:'50px',
+      display:'inline-block',
+      width:'30%',
+      height:'500px',
+    }
+  },
+  logo: {
+    base: {
+      display:'block',
+      marginLeft:'auto',
+      marginRight:'auto',
+      padding:'0%',
+      width:'20%'
+    }
+  },
+  petImageDiv: {
+    base: {
+      marginLeft:'10%',
+      display:'inline',
+      borderRadius:'30px',
+    }
+  },
+  petImage: {
+    base: {
+      display:'inline-block',
+      borderRadius:'5%',
+    }
+  },
+  description: {
+    base: {
+      width:'50%',
+      marginLeft:'11%',
+      fontFamily:'Raleway, sans-serif',
+      fontSize:'14px',
+      display:'inline-block',
+    },
+    primary: {
+      display:'inline-block',
+      float:'left',
+      width:'70%',
+      height:'500px',
     }
   }
 }

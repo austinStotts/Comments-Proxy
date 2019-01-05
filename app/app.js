@@ -14,19 +14,22 @@ import Link from './comps/link';
 import Buy from './comps/buy';
 import Title from './comps/title';
 
+// Pet-info
+import Description from './src/index';
+
 // Root component
 class App extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      pet_id: "1114", // current pet to 'get' from server / DB
+      pet_id: "16133", // current pet to 'get' from server / DB
       pet: { // hold current pet to render
         "pet_id":"9999",
         "class":"Loading...",
         "family":"Loading...",
         "genus":"Loading...",
         "species":"Loading...",
-        "price":".Loading.."
+        "price":"Loading..."
       },
       buy: true // toggle showing purchase options
     };
@@ -60,20 +63,23 @@ class App extends PureComponent {
     return (
       <StyleRoot>
         <div>
-          {/* <img src='./petsylogo.png' alt='...' width="160px"></img> */}
-          <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
-            <Title pet={this.state.pet}/>
-            <Buy price={this.state.pet.price} func={this.showBuy}/>
-            <Disclaimer />
-          </div>                                                            {/* 
-
-
-          always being rendered to clear hover states and keep user options.
-          show purchase options:                                            */}
-          <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
-            <Options pet={this.state.pet} showBuy={this.showBuy}/>
+          <img src='./petsylogo.png' alt='...' width="260px" style={[styles.logo.base]}></img>
+          <Description pet_id={this.state.pet_id} />
+          <div style={[styles.purchase.base]}>
+            <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
+              <Title pet={this.state.pet}/>
+              <Buy price={this.state.pet.price} func={this.showBuy}/>
+              <Disclaimer />
+            </div>                                                            {/* 
+              always being rendered to clear hover states and keep user options.
+              show purchase options:                                          */}
+            <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
+              <Options pet={this.state.pet} showBuy={this.showBuy}/>
+            </div>
           </div>
-          
+          <div style={[{display:'block',marginTop:'50px'}]}>
+            <div id="reviews"></div>
+          </div>
         </div>
       </StyleRoot>
     )
