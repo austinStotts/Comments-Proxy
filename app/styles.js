@@ -110,30 +110,6 @@ const styles = {
       },
     },
   },
-  // Button Options
-  toggle: {
-    base: {
-      width:'75px',
-      height:'30px',
-      outline:'none',
-      margin:'2px 1px 2px 1px',
-      borderRadius:'5px',
-      borderWidth:'1px',
-      borderColor:'#4cc1df',
-      fontSize:'13px',
-      fontFamily:'Raleway, sans-serif',
-      transitionDuration:'0.3s',
-      cursor:'pointer',
-      display:'inline-block'
-    },
-    primary: {
-      display:'inline-block',
-      ":hover": {
-        backgroundColor:'#4cc1df',
-        color:'white'
-      },
-    },
-  },
   // back button
   back:{
     base:{

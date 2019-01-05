@@ -55,34 +55,28 @@ class Option extends PureComponent {
   render () {
     return (
       <div>
-      <Button 
-      text={this.props.o1}
-        func={_=>{
-          this.changeColor('one');
-        }}
-        special={
-          {
+        <Button 
+          text={this.props.o1}
+          func={_=>{this.changeColor('one');}}
+          special={{
             backgroundColor:this.state.o1Background,
             color:this.state.o1Color,
             width:'90px',
             height:'25px',
             margin:'5px 1px 5px 0px',
-          }
-        }/>
-      <Button 
-        text={this.props.o2}
-        func={_=>{
-          this.changeColor('two')
-        }}
-        special={
-          {
+          }}
+        />
+        <Button 
+          text={this.props.o2}
+          func={_=>{this.changeColor('two')}}
+          special={{
             backgroundColor:this.state.o2Background,
             color:this.state.o2Color,
             width:'90px',
             height:'25px',
             margin:'5px 0px 5px 1px',
-          }
-        }/>
+          }}
+        />
       </div>
     )
   }
