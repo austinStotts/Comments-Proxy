@@ -2,7 +2,7 @@
 import React, { Component, PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
-import Radium from 'radium';
+import Radium, { StyleRoot } from 'radium';
 
 // React components from files
 import styles from './styles';
@@ -58,20 +58,24 @@ class App extends PureComponent {
   render () {
     // Show product info
     return (
-      <div>
-        <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
-          <Title pet={this.state.pet}/>
-          <Buy price={this.state.pet.price} func={this.showBuy}/>
-          <Disclaimer />
-        </div>                                                            {/* 
+      <StyleRoot>
+        <div style={{display:'inline-block'}}>
+          <img src='./petsylogo.png' alt='...' width="160px" style={{display:'inline-block'}}></img>
+          <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%',display:'inline-block'}]}>
+            <Title pet={this.state.pet}/>
+            <Buy price={this.state.pet.price} func={this.showBuy}/>
+            <Disclaimer />
+          </div>                                                            {/* 
 
 
-        always being rendered to clear hover states and keep user options.
-        show purchase options:                                            */}
-        <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
-          <Options pet={this.state.pet} showBuy={this.showBuy}/>
+          always being rendered to clear hover states and keep user options.
+          show purchase options:                                            */}
+          <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
+            <Options pet={this.state.pet} showBuy={this.showBuy}/>
+          </div>
+          
         </div>
-      </div>
+      </StyleRoot>
     )
   }
 }

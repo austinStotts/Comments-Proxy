@@ -1,4 +1,3 @@
-
 // Javascript styling object
 // used as a sort of global style object
 const styles = {
@@ -8,7 +7,7 @@ const styles = {
       outline:'none',
       borderRadius:'5px',
       borderWidth:'1px',
-      borderColor:'#0074D9',
+      borderColor:'#4cc1df',
       fontSize:'17px',
       fontFamily:'Raleway, sans-serif',
       transitionDuration:'0.3s',
@@ -18,7 +17,7 @@ const styles = {
     primary: {
       display:'inline-block',
       ":hover": {
-        backgroundColor:'#0074D9',
+        backgroundColor:'#4cc1df',
         color:'white'
       },
     },
@@ -107,7 +106,7 @@ const styles = {
       padding:'2px',
       display:'inline-block',
       ":hover": {
-        color:'#0074D9',
+        color:'#4cc1df',
       },
     },
   },
@@ -120,7 +119,7 @@ const styles = {
       margin:'3px',
       borderRadius:'5px',
       borderWidth:'1px',
-      borderColor:'#0074D9',
+      borderColor:'#4cc1df',
       fontSize:'17px',
       fontFamily:'Raleway, sans-serif',
       transitionDuration:'0.3s',
@@ -130,7 +129,7 @@ const styles = {
     primary: {
       display:'inline-block',
       ":hover": {
-        backgroundColor:'#0074D9',
+        backgroundColor:'#4cc1df',
         color:'white'
       },
     },
@@ -162,7 +161,9 @@ const styles = {
       fontFamily:'Raleway, sans-serif',
       margin:'0px 0px 0px 10px',
       fontSize:'12px',
-      transitionDuration:'0.5s',
+      display:'inline-block',
+      animationFillMode:'forwards',
+      animationIterationCount:'1',
     }
   },
   infoDiv: {
