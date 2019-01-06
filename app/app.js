@@ -22,7 +22,7 @@ class App extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      pet_id: "18250", // current pet to 'get' from server / DB
+      pet_id: "4111", // current pet to 'get' from server / DB
       pet: { // hold current pet to render
         "pet_id":"9999",
         "class":"Loading...",
@@ -37,11 +37,12 @@ class App extends PureComponent {
     // bind functions to 'this' context
     this.getPet = this.getPet.bind(this);
     this.showBuy = this.showBuy.bind(this);
+    this.changePetId = this.changePetId.bind(this);
   }
 
   getPet () { // server get request for pet object
-    Axios.get(`http://ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy/${this.state.pet_id}`, {
-    }).then(res => {
+    Axios.get(`http://ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy/${this.state.pet_id}`)
+    .then(res => {
       console.table(res.data);
       this.setState({
         pet:res.data
@@ -55,16 +56,22 @@ class App extends PureComponent {
 
   componentDidMount () { // get current pet data on mount
     console.log('hi :)');
+    this.div.addEventListener("changePetId", this.changePetId);
     this.getPet();
+  }
+
+  changePetId (e) {
+    console.log('change pet')
+    this.setState({pet_id:e.detail.pet_id},this.getPet);
   }
 
   render () {
     // Show product info
     return (
       <StyleRoot>
-        <div>
-          <img src='./petsylogo.png' alt='...' width="260px" style={[styles.logo.base]}></img>
-          <Description pet_id={this.state.pet_id} />
+        <div className={'petIdSubscriber'} ref={el => (this.div = el)}>
+          {/* <img src='./petsylogo.png' alt='...' width="260px" style={[styles.logo.base]}></img> */}
+          {/* <Description pet_id={this.state.pet_id} /> */} 
           <div style={[styles.purchase.base]}>
             <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
               <Title pet={this.state.pet}/>
@@ -77,9 +84,9 @@ class App extends PureComponent {
               <Options pet={this.state.pet} showBuy={this.showBuy}/>
             </div>
           </div>
-          <div style={[{display:'block',marginTop:'50px'}]}>
+          {/* <div style={[{display:'block',marginTop:'50px'}]}>
             <div id="reviews"></div>
-          </div>
+          </div> */}
         </div>
       </StyleRoot>
     )

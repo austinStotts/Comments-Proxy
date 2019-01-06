@@ -186,7 +186,7 @@ const styles = {
   description: {
     base: {
       width:'50%',
-      marginLeft:'11%',
+      marginLeft:'15%',
       fontFamily:'Raleway, sans-serif',
       fontSize:'14px',
       display:'inline-block',

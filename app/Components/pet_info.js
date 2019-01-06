@@ -21,6 +21,7 @@ class PetInfo extends React.Component {
   }
 
   componentDidMount() {
+    console.log('mounted')
     axios.get(`http://ec2-52-90-48-243.compute-1.amazonaws.com:3000/api/info/${this.props.pet_id}`)
       .then((response) => {
       console.log('response to initial GET: ', response.data);
