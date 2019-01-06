@@ -22,7 +22,7 @@ class App extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      pet_id: "4111", // current pet to 'get' from server / DB
+      pet_id: "1112", // current pet to 'get' from server / DB
       pet: { // hold current pet to render
         "pet_id":"9999",
         "class":"Loading...",
