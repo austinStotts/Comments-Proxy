@@ -5,10 +5,10 @@ const SelectionTabs = props => {
   return (
     <div>
       <TabContainer id="Pet-Selection">
-        <Navbar>
+        <Navbar className={'search-nav'}>
           <Row>
             <Col>
-              <Nav bsStyle="tabs" onSelect={props.handleSelect.bind(this)}>
+              <Nav className={'search-item'} bsStyle="tabs" onSelect={props.handleSelect.bind(this)}>
                 <NavDropdown eventKey="mammal" title="Mammal">
                   <MenuItem eventKey="1111">Felidae</MenuItem>
                   <MenuItem eventKey="1218">Canidae</MenuItem>
@@ -25,12 +25,11 @@ const SelectionTabs = props => {
                   <MenuItem eventKey="10165">Cervidae</MenuItem>
                   <MenuItem eventKey="10166">Giraffidae</MenuItem>
                   <MenuItem eventKey="10168">Bovidae</MenuItem>
-                  <MenuItem eventKey="10171">Cervidae</MenuItem>
                 </NavDropdown>
               </Nav>
             </Col>
             <Col>
-              <Nav bsStyle="tabs">
+              <Nav className={'search-item'} bsStyle="tabs">
                 <NavDropdown
                   eventKey="Reptilia"
                   title="Reptilia"
@@ -46,7 +45,7 @@ const SelectionTabs = props => {
               </Nav>
             </Col>
             <Col>
-              <Nav bsStyle="tabs">
+              <Nav className={'search-item'} bsStyle="tabs">
                 <NavDropdown
                   eventKey="Aves"
                   title="Aves"
@@ -60,7 +59,7 @@ const SelectionTabs = props => {
               </Nav>
             </Col>
             <Col>
-              <Nav bsStyle="tabs">
+              <Nav className={'search-item'} bsStyle="tabs">
                 <NavDropdown
                   eventKey="Actinopterygii"
                   title="Actinopterygii"
