@@ -13,9 +13,10 @@ import Button from './comps/button';
 import Link from './comps/link';
 import Buy from './comps/buy';
 import Title from './comps/title';
+import Search from './search/index';
 
 // Pet-info
-import Description from './Components/pet_info';
+import Description from './description/pet_info';
 
 // Root component
 class App extends PureComponent {
@@ -43,7 +44,6 @@ class App extends PureComponent {
   getPet () { // server get request for pet object
     Axios.get(`http://ec2-3-17-59-254.us-east-2.compute.amazonaws.com:4002/buy/${this.state.pet_id}`)
     .then(res => {
-      console.table(res.data);
       this.setState({
         pet:res.data
       })
@@ -60,9 +60,8 @@ class App extends PureComponent {
     this.getPet();
   }
 
-  changePetId (e) {
-    console.log('change pet')
-    this.setState({pet_id:e.detail.pet_id},this.getPet);
+  changePetId (pet_id) {
+    this.setState({pet_id}, () => {this.getPet(this.state.pet_id)});
   }
 
   render () {
@@ -70,23 +69,26 @@ class App extends PureComponent {
     return (
       <StyleRoot>
         <div className={'petIdSubscriber'} ref={el => (this.div = el)}>
-          {/* <img src='./petsylogo.png' alt='...' width="260px" style={[styles.logo.base]}></img> */}
-          {/* <Description pet_id={this.state.pet_id} /> */} 
-          <div style={[styles.purchase.base]}>
-            <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
-              <Title pet={this.state.pet}/>
-              <Buy price={this.state.pet.price} func={this.showBuy}/>
-              <Disclaimer />
-            </div>                                                            {/* 
-              always being rendered to clear hover states and keep user options.
-              show purchase options:                                          */}
-            <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
-              <Options pet={this.state.pet} showBuy={this.showBuy}/>
+          <img src='./petsylogo.png' alt='...' width="260px" style={[styles.logo.base]}></img>
+          <Search pet_id={this.state.pet_id} changePetId={this.changePetId}/>
+          <div style={[styles.product.base]}>
+            <Description pet_id={this.state.pet_id} /> 
+            <div style={[styles.purchase.base]}>
+              <div hidden={!this.state.buy} style={[styles.div.base,{width:'100%'}]}>
+                <Title pet={this.state.pet}/>
+                <Buy price={this.state.pet.price} func={this.showBuy}/>
+                <Disclaimer />
+              </div>                                                            {/* 
+                always being rendered to clear hover states and keep user options.
+                show purchase options:                                          */}
+              <div hidden={this.state.buy} style={[styles.div.base,{width:'100%'}]}> 
+                <Options pet={this.state.pet} showBuy={this.showBuy}/>
+              </div>
             </div>
           </div>
-          {/* <div style={[{display:'block',marginTop:'50px'}]}>
+          <div style={[{display:'block',marginTop:'50px'}]}>
             <div id="reviews"></div>
-          </div> */}
+          </div>
         </div>
       </StyleRoot>
     )

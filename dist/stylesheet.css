@@ -1,45 +1,42 @@
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 60px 450px 150px 60px;
-    grid-template-rows: 60px 325px 200px 60px;
-    grid-template-areas: ". . . ."
-                         ". image name ."
-                         ". description description ."
-                         ". . . . ";
-    grid-gap: 10px 10px;
-    justify-content: center
-} */
-
-.pet-name-container {
-    grid-area: "name";
-    align-self: start;
-    padding-top: 25px;
-    padding-left: 12px;
+.related-div {
+  width: 90%;
+  height: 90%;
+  margin: 0%;
+  padding: 0%;
 }
 
-.pet-genus {
-    font-size: 18px;
-    font-weight: 300;
-    padding-top: 7px;
+.related-image {
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
 }
 
-.pet-species {
-    font-size: 24px;
-    font-weight: 300;
+.related-panel {
+  border: none;
+  box-shadow: none;
+  margin: 0px;
+  padding: 0px;
 }
 
-.pet-description-container {
-    border-bottom: 1px solid rgba(20, 20, 20, 0.377);
+.related-panel-body {
+  box-shadow: none;
+  margin: 0px;
+  padding: 0px;
 }
 
-.pet-description {
-    grid-area: "description";
-    font-weight: 300;
+.related-panel-wrapper {
+  display: inline-block;
+  width: 10%;
+  min-width: 100px;
+  margin: 0px 20px 0px 20px;
+  
 }
 
-.pet-description-header {
-    padding-top: 5px;
-    font-weight: 500;
-    font-size: 18px;
-    border-top: 1px solid rgba(20, 20, 20, 0.377);
+.related-main {
+  border: none;
+  box-shadow: none;
+}
+
+.related-main-body {
+
 }
